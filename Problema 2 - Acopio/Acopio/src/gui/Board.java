@@ -13,7 +13,7 @@ public class Board extends JFrame{
     private static final long serialVersionUID = 1L;
     private JLabel lockers[] = new JLabel[ 20 ];
     public boolean run = false;
-    private JButton boton = new JButton("notificar");
+
     public Board() {
         super( "Problema 2 - Centro de Acopio" );
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
@@ -27,7 +27,7 @@ public class Board extends JFrame{
         JButton b = new JButton( "START!" );
         b.setBounds( 220, 350, 150, 40 );
 
-        boton.setBounds( 220, 390, 150, 50 );
+
         
         int x = 150, y = 50, c = 0;
 
@@ -64,16 +64,9 @@ public class Board extends JFrame{
             }   
         });
         
-        boton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                this.notify();
-            }
-        });
 
         add(header);
         add(b);
-        add(boton);
         setVisible( true );
     }
 
